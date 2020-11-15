@@ -27,6 +27,28 @@ public class Exercise005 {
 
     public String[] mexicanWave(String str) {
         // Your code here!
-        return new String[] {};
+        str = str.toLowerCase();
+        char[] arrayOfChar = str.toCharArray();
+        int len = str.length();
+        String[] wave = new String[str.replaceAll(" ", "").length()];
+        String s = "";
+        String ltr = "";
+        int k = 0;
+        for (int i = 0; i < len; i++){
+            s = "";
+            for (int j = 0; j < len; j++) {
+                if (i == j) {
+                    ltr = Character.toString(arrayOfChar[j]).toUpperCase();
+                } else {
+                    ltr = Character.toString(arrayOfChar[j]);
+                }
+                s = s + ltr;
+            }
+            if (! s.equals(str)) {
+                wave[k] = s;
+                k++;
+            }
+        }
+        return wave;
     }
 }
