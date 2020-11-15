@@ -27,6 +27,7 @@ public class Exercise003 {
     // The first element 80 is the total weight of team 1, and the second element 0 is the total weight of team 2.
 
     public static int[] rowWeights(final int[] weights) {
+        //scan array to get sum of odd and even elements
         int[] res = {0,0};
         for (int i = 0; i < weights.length; i++) {
             if (i % 2 != 0) {
