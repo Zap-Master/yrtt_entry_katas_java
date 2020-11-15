@@ -7,6 +7,11 @@ public class Exercise002 {
 
     public int past(int h, int m, int s) {
         // Your code here!
-        return 0;
+        // 1s = 1000 milliseconds
+        // 1m = 60s = 60 * 1000 milliseconds
+        // 1h = 60*60s = 3600 * 1000 milliseconds
+        int res;
+        res = (s + m * 60 + h * 3600) * 1000;
+        return res;
     }
 }
