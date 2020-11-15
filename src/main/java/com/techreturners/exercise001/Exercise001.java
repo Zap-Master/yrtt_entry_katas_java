@@ -10,6 +10,11 @@ public class Exercise001 {
 
     // Good luck!
    private static int partition(int[] arr, int l, int r) {
+        // step 1 sort array with QuickSort algorithm
+        // step 2 scan the sorted array to find two
+        // elements without duplicates, as in sorted
+        // array unique element has different elements on left and right side
+
         int t = 0;
         int pi = r; // pivot index
         int p = arr[r];
@@ -43,12 +48,10 @@ public class Exercise001 {
     }
 
     public int singles(int [] arr){
-        /*
-        */
         int i = 0;
         int s = 0;
-        QuickSort(arr, 0,arr.length - 1);
-        while (i <=arr.length - 1) {
+        QuickSort(arr, 0,arr.length - 1);  // step 1
+        while (i <=arr.length - 1) {    // step 2
             if (i + 1 > arr.length -1) {
                 if (arr[i] != arr[i-1]) {
                     s = s + arr[i];
@@ -66,6 +69,5 @@ public class Exercise001 {
             }
         }
         return s;
- 
     }
 }
